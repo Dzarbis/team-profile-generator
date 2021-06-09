@@ -21,3 +21,11 @@ test('gets manager id', () => {
 test('gets manager email', () => {
     expect(manager.getEmail()).toEqual(manager.email);
 });
+
+test('gets manager office number', () => {
+    expect(manager.getOfficeNumber()).toEqual(manager.officeNumber);
+});
+
+test('gets manager role', () => {
+    expect(manager.getRole()).toBe('Manager');
+});
