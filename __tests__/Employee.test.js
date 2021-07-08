@@ -1,11 +1,11 @@
 const Employee = require("../lib/Employee");
 
-const employee = new Employee('Peter', 'Quill', 69, 'starlord@gotg.com');
+const employee = new Employee('Peter', 'Quill', '69', 'starlord@gotg.com');
 
 test('creates a new employee', () => {
     expect(employee.firstName).toBe('Peter');
     expect(employee.lastName).toBe('Quill');
-    expect(employee.id).toBe(69);
+    expect(employee.id).toEqual('69');
     expect(employee.email).toBe('starlord@gotg.com');
 });
 

@@ -1,11 +1,11 @@
 const Intern = require('../lib/Intern');
 
-const intern = new Intern('Peter', 'Quill', 69, 'starlord@gotg.com', 'Ravager U');
+const intern = new Intern('Peter', 'Quill', '69', 'starlord@gotg.com', 'Ravager U');
 
 test('creates a new intern', () => {
     expect(intern.firstName).toBe('Peter');
     expect(intern.lastName).toBe('Quill');
-    expect(intern.id).toBe(69);
+    expect(intern.id).toBe('69');
     expect(intern.email).toBe('starlord@gotg.com');
     expect(intern.school).toBe('Ravager U');
 });

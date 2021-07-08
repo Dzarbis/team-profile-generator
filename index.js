@@ -1,5 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
+const generate = require('./src/template.js');
 const employeeList = [];
 
 const prompts = [
@@ -149,4 +150,18 @@ const prompter = () => {
     });
 };
 
-prompter();
+const writer = (htmlContent) => {
+    fs.writeFile('./dist/index.html', htmlContent, err => {
+        if (err) {
+            throw err
+        };
+        console.log('Success!!! Your page is created!');
+    });
+};
+
+console.log('test');
+
+prompter()
+    .then(data => generate(data))
+    .then(generatedHtml => writer(generatedHtml))
+    .catch(err => console.log(err));

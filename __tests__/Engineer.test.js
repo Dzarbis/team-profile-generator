@@ -1,11 +1,11 @@
 const Engineer = require('../lib/Engineer');
 
-const engineer = new Engineer('Peter', 'Quill', 69, 'starlord@gotg.com', 'StarLord');
+const engineer = new Engineer('Peter', 'Quill', '69', 'starlord@gotg.com', 'StarLord');
 
 test('creates a new engineer', () => {
     expect(engineer.firstName).toBe('Peter');
     expect(engineer.lastName).toBe('Quill');
-    expect(engineer.id).toBe(69);
+    expect(engineer.id).toBe('69');
     expect(engineer.email).toBe('starlord@gotg.com');
     expect(engineer.gitHub).toBe('StarLord');
 });
